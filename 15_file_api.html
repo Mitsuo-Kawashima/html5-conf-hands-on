@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>クロスフェードスライド</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-1.11.2.js"></script>
+<script>
+	$(function(){
+		/*
+		$('.slide ul li').hide();
+		$('.slide ul li:first').addClass('active').show();
+		setInterval(function(){
+			var $active = $('.slide ul li.active');
+			var $next;
+			if($active.next('li').length == 1){
+				$next = $active.next('li');
+			}else{
+				$next = $('.slide ul li:first');
+			}
+			$active.fadeOut().removeClass('active');
+			$next.fadeIn().addClass('active');
+		},2000);
+		 */
+
+		//オブジェクトを生成
+		var reader = new FileReader();
+
+		//ドロップしたとき、ファイルの情報を読み込む
+		 $('.drop-frame').on('drop',function(e){
+		 e.preventDefault();
+			 for(var i = 0;i<e.originalEvent.dataTransfer.files.length ;i++){
+				 reader.readAsDataURL(e.originalEvent.dataTransfer.files[i]);
+			 }
+		 });
+
+		//ドラッグしたときの処理
+		$('.drop-frame').on('dragover',function(e){
+			e.preventDefault();
+		});
+
+	});
+</script>
+</head>
+<body>
+<div class="slide">
+	<ul>
+	</ul>
+</div>
+<p class="drop-frame">ファイルをドラッグ&ドロップしてください</p>
+<p class="start">start</p>
+<div class="thumbnail">
+	<ul>
+	</ul>
+</div>
+</body>
+</html>

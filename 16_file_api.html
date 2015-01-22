@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>クロスフェードスライド</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-1.11.2.js"></script>
+<script>
+	$(function(){
+		/*
+		$('.slide ul li').hide();
+		$('.slide ul li:first').addClass('active').show();
+		setInterval(function(){
+			var $active = $('.slide ul li.active');
+			var $next;
+			if($active.next('li').length == 1){
+				$next = $active.next('li');
+			}else{
+				$next = $('.slide ul li:first');
+			}
+			$active.fadeOut().removeClass('active');
+			$next.fadeIn().addClass('active');
+		},2000);
+		 */
+
+		//オブジェクトを生成
+		var reader = new FileReader();
+
+		//ドロップしたとき、ファイルの情報を読み込む
+		 $('.drop-frame').on('drop',function(e){
+		 e.preventDefault();
+			 //ファイルの情報は、以下のように情報を取り出す
+			 for(var i = 0;i<e.originalEvent.dataTransfer.files.length ;i++){
+				 //e.originalEvent.dataTransfer.files.lengthはドロップしたファイルの数
+				 //console.log('ドロップしたファイルの数',e.originalEvent.dataTransfer.files.length);
+				 //console.log('iは',i);
+				 console.log(e.originalEvent.dataTransfer.files[i]);
+				 //readAsDataURLはファイルの情報をData URIに変換するメソッド
+				 reader.readAsDataURL(e.originalEvent.dataTransfer.files[i]);
+				 //今回書いたコードでは、複数ファイルをトロップしても最初の1つしか読み込まないことがわかる。
+				 //console.log(reader.readAsDataURL);
+			 }
+		 });
+
+		//ドラッグしたときの処理
+		$('.drop-frame').on('dragover',function(e){
+			e.preventDefault();
+		});
+
+	});
+</script>
+</head>
+<body>
+<div class="slide">
+	<ul>
+	</ul>
+</div>
+<p class="drop-frame">ファイルをドラッグ&ドロップしてください</p>
+<p class="start">start</p>
+<div class="thumbnail">
+	<ul>
+	</ul>
+</div>
+</body>
+</html>

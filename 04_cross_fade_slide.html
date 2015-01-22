@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>クロスフェードスライド02</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-1.11.2.js"></script>
+<script>
+//おまじない
+$(function(){
+	//liを全部非表示
+	$('.slide ul li').hide();
+	//一番目のliにactiveというクラスをつけて表示する。また、APIが連続して処理されている。これをメソッドチェーンという。
+	$('.slide ul li:first').addClass('active').show();
+});
+//おまじないの終わり
+</script>
+</head>
+<body>
+	<div class="slide">
+		<ul>
+			<li><img src="./images/sample-01.png" alt=""/></li>
+			<li><img src="./images/sample-02.png" alt=""/></li>
+			<li><img src="./images/sample-03.png" alt=""/></li>
+		</ul>
+	</div>
+</body>
+</html>

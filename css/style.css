@@ -1,0 +1,79 @@
+﻿li {
+	list-style-type: none;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+.slide {
+	height:400px;
+	margin:0 auto 10px;
+	position:relative;
+	width:600px;
+}
+
+.slide img {
+	left:0;
+	position:absolute;
+	top:0;
+}
+
+.drop-frame {
+	border: 1px solid #CCC;
+	color: #9D9D9D;
+	font-size: 14px;
+	margin: 0 auto 10px;
+	padding: 50px 0;
+	text-align: center;
+	width: 600px;
+}
+
+.slide ul {
+	height: 400px;
+	position: relative;
+	width: 600px;
+}
+.slide ul li {
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+.start {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #4b4b4b), color-stop(1.00, #131313));
+	background: -webkit-linear-gradient(#4b4b4b, #131313);
+	background: -moz-linear-gradient(#4b4b4b, #131313);
+	background: -o-linear-gradient(#4b4b4b, #131313);
+	background: -ms-linear-gradient(#4b4b4b, #131313);
+	background: linear-gradient(#4b4b4b, #131313);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 auto 10px;
+	padding: 15px 0;
+	text-align: center;
+	width: 600px;
+}
+
+.thumbnail ul {
+	margin: 0 auto;
+	width: 600px;
+}
+
+.thumbnail ul li {
+	display: inline-block;
+	height: 50px;
+	margin: 0;
+	width: 100px;
+}
+
+.thumbnail ul li img {
+	height: auto;
+	width: 100px;
+}
