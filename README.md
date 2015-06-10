@@ -1,1 +1,1 @@
-# 画面右中段にある、DOWNLOAD ZIPをクリックしてデータをダウンロードしてください。
+Clone in the Desktopまたは、Download ZIPをクリックしてデータをダウンロードしてください。
